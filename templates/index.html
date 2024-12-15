@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="quiz-header">
+            <h1>Interactive Quiz</h1>
+            <p>Test your knowledge with our interactive quiz!</p>
+            <button id="start-quiz" class="btn btn-primary">Start Quiz</button>
+        </div>
+
+        <div class="quiz-content hidden">
+            <div class="question">
+                <!-- Question text will be inserted here -->
+            </div>
+            <div class="options">
+                <!-- Options will be inserted here -->
+            </div>
+            <div class="quiz-controls">
+                <button id="submit-answer" class="btn btn-primary">Submit Answer</button>
+                <button id="next-question" class="btn btn-secondary hidden">Next Question</button>
+            </div>
+        </div>
+
+        <div class="stats hidden">
+            <h2>Quiz Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value" id="total-questions">0</div>
+                    <div class="stat-label">Total Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="correct-answers">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="incorrect-answers">0</div>
+                    <div class="stat-label">Incorrect Answers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="score-percentage">0%</div>
+                    <div class="stat-label">Score</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/quiz.js' %}"></script>
+</body>
+</html>
